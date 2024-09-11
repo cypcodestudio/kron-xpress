@@ -1,0 +1,71 @@
+.full-width-table {
+  width: 100%;
+}
+.row-green{
+  background-color: #1abc9c;
+  color: white;
+}
+
+.row-red{
+  background-color: #e74c3c;
+  color: white;
+}
+
+.app-main-bakcground-color{
+  color: #fff;
+  background-color: #4553f0;
+}
+
+.app-main-color{
+  color: #4553f0;
+  background-color: #fff;
+}
+
+.station-select-form{
+  position: relative;
+  left: 20px;
+  width: 70%;
+  padding-top: 23px;
+}
+.mat-mdc-form-field-infix{
+  background-color: transparent;
+}
+.station-select-form-field{
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+
+.station-select-form-field mat-select{
+  background-color: transparent;
+}
+
+.income-search-filter-form{
+  position: relative;
+  left: 20px;
+  width: 70%;
+  padding-top: 23px;
+}
+
+.income-search-filter-form mat-form-field{
+  width: 50%;
+}
+
+.expenditure-search-filter-form{
+  position: relative;
+  left: 20px;
+  width: 70%;
+  padding-top: 23px;
+}
+
+.expenditure-search-filter-form mat-form-field{
+  width: 50%;
+}
+
+
+.station-submenu{
+  position: relative;
+  display: flex;
+  list-style: none;
+
+}

@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.main-toolbar-spacer{
+    flex: 1 1 auto;
+}
+.app-main-bakcground-color{
+    color: #fff;
+    background-color: #4553f0;
+  }
+  
+  .app-main-color{
+    color: #4553f0;
+    background-color: #fff;
+  }
+
+.app-toolbar{
+    position: relative;
+    background-color: #34495e;
+}
+
+.app-content-padding{
+    padding: 5px;
+}

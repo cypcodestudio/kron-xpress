@@ -1,0 +1,120 @@
+<div class="mat-elevation-z8">
+  <mat-toolbar class="app-toolbar">Scheduler</mat-toolbar>
+
+<div class="app-content">
+  <p>
+    <mat-form-field class="name-field" appearance="outline">
+      <mat-label>Job Name</mat-label>
+      <input matInput type="text" name="jobName" [(ngModel)]="jobName" id="jobName"  placeholder="Service job name">
+      <mat-icon matSuffix>drive_file_rename_outline</mat-icon>
+      <mat-hint>Job Name</mat-hint>
+    </mat-form-field>
+    <mat-form-field  class="name-field" appearance="outline">
+      <mat-label>Service Name</mat-label>
+      <input matInput type="text" name="serviceName" [(ngModel)]="serviceName" id="serviceName"  placeholder="Service name">
+      <mat-icon matSuffix>api</mat-icon>
+      <mat-hint>Service Name</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="name-field" appearance="outline">
+      <mat-label>Service Link</mat-label>
+      <input matInput type="text" name="serviceLink" [(ngModel)]="serviceLink" id="serviceLink"  placeholder="Service link">
+      <mat-icon matSuffix>insert_link</mat-icon>
+      <mat-hint>Service Link</mat-hint>
+    </mat-form-field>
+  </p>
+  <br/>
+  
+  <p>
+    <mat-form-field class="expression-input" appearance="outline">
+      <mat-label>Cron Expression</mat-label>
+      <input matInput type="text" name="cron" [(ngModel)]="cronExpression" id="cron"  (input)="updateDatesByExpression($event)" placeholder="* * * * * *">
+      <mat-icon matSuffix>schedule</mat-icon>
+      <mat-hint>Cron Expression</mat-hint>
+    </mat-form-field>
+  </p>
+  <br/>
+  
+  <form class="schedule-form">
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Second</mat-label>
+        <input matInput type="text" [(ngModel)]="second" (input)="updateCronByField()" name="second" placeholder="0-59">
+        <mat-icon matSuffix>schedule</mat-icon>
+        <mat-hint>Specify Second</mat-hint>
+      </mat-form-field>
+      <span class="main-toolbar-spacer"></span>
+      <span class="description">* every second / 0 - 59 specific second</span>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Minute</mat-label>
+        <input matInput type="text" [(ngModel)]="minute" (input)="updateCronByField()" name="minute" placeholder="0-59">
+        <mat-icon matSuffix>schedule</mat-icon>
+        <mat-hint>Specify Minute</mat-hint>
+      </mat-form-field>
+      <span class="main-toolbar-spacer"></span>
+      <span class="description">* every minute / 0 - 59 specific minute</span>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Hour</mat-label>
+        <input matInput type="text" [(ngModel)]="hour" (input)="updateCronByField()" name="hour" placeholder="0-23">
+        <mat-icon matSuffix>schedule</mat-icon>
+        <mat-hint>Specify Hour</mat-hint>
+      </mat-form-field>
+      <span class="main-toolbar-spacer"></span>
+      <span class="description">* every hour / 0 - 23 specific hour</span>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Day of the month</mat-label>
+        <input matInput type="text" [(ngModel)]="monthday" (input)="updateCronByField()" name="monthday" placeholder="1-31">
+        <mat-icon matSuffix>schedule</mat-icon>
+        <mat-hint>Specify Day of the Month</mat-hint>
+      </mat-form-field>
+      <span class="main-toolbar-spacer"></span>
+      <span class="description">* every day of the month / 0 - 30 specific day of the month</span>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Month</mat-label>
+        <input matInput type="text" [(ngModel)]="month" (input)="updateCronByField()" name="month" placeholder="1-12 or JAN-DEC">
+        <mat-icon matSuffix>schedule</mat-icon>
+        <mat-hint>Specify month</mat-hint>
+      </mat-form-field>
+      <span class="main-toolbar-spacer"></span>
+      <span class="description">* every month / 1 - 12 specific month</span>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Day of the week</mat-label>
+        <input matInput type="text" [(ngModel)]="weekday" (input)="updateCronByField()" name="weekday" placeholder="1-7 or SUN-SAT">
+        <mat-icon matSuffix>schedule</mat-icon>
+        <mat-hint>Specify week day</mat-hint>
+      </mat-form-field>
+      <span class="main-toolbar-spacer"></span>
+      <span class="description">* every week day / 1 - 7 specific week day</span>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Year</mat-label>
+        <input matInput type="text" [(ngModel)]="year" (input)="updateCronByField()" name="year" placeholder="0-59">
+        <mat-icon matSuffix>schedule</mat-icon>
+        <mat-hint>Specify Year</mat-hint>
+      </mat-form-field>
+      <span class="main-toolbar-spacer"></span>
+      <span class="description">* every year / 1900 - 2059 specific year</span>
+    </p>
+  </form>
+
+  <br/>
+  <mat-toolbar>Job Schedule: {{cron}}</mat-toolbar>
+  <br/>
+  <mat-toolbar color="primary">
+    <button mat-button><mat-icon (click)="saveJob()">save</mat-icon> Save</button>
+  </mat-toolbar>
+  
+</div>
+</div>

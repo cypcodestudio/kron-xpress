@@ -1,0 +1,32 @@
+.full-width-table {
+    overflow-x: scroll;
+  }
+.app-content{
+  padding: 20px;
+}  
+  .app-text-grey{
+    color: #969494;
+  }
+  .white{
+    color: #fff;
+  }
+  
+  .schedule-form{
+    width: 100%;
+  }
+  .schedule-form mat-form-field{
+    left: 5%;
+    width: 30%;
+  }
+
+  .schedule-form .description{
+    width: 30%;
+    padding: 10%;
+  }
+  .expression-input{
+    width: 100%;
+  }
+  .name-field{
+    width: 45%;
+    padding: 20px;
+  }
