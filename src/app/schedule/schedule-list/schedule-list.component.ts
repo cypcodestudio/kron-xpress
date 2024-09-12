@@ -35,10 +35,11 @@ export class ScheduleListComponent implements AfterViewInit {
   updateJob(row: any, event: any){
     row.enabled = event.checked;
     if(row.enabled){
-
+      //todo start job api call
       this.dialog.alert("Job: " + row.name + " started for service: " + row.service);
     }else{
 
+      //todo stop job api call
     this.dialog.alert("Job: " + row.name + " stopped for service: " + row.service);
     }
   }
