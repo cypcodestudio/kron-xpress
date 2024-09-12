@@ -29,14 +29,12 @@ export class ScheduleDetailComponent implements AfterViewInit{
     @Optional() public dialogRef: MatDialogRef<ScheduleListComponent>,
     @Optional() @Inject(MAT_DIALOG_DATA) public data: any) {
     if (this.data !== null) {
-       this.schedulerDto = this.data.entity as any;
-       
+       this.schedulerDto = this.data.entity as any;   
     }
   }
 
   ngAfterViewInit(): void {
     if (this.schedulerDto !== null || this.schedulerDto !== undefined) {
-      alert(this.schedulerDto.row);
       this.jobName = this.schedulerDto.name;
       this.serviceName = this.schedulerDto.service;
       this.serviceLink = this.schedulerDto.link;
@@ -80,6 +78,6 @@ export class ScheduleDetailComponent implements AfterViewInit{
     this.cron = cronstrue.toString(expression);
   }
   saveJob(){
-
+    this.dialog.alert("Service not yet implemented.");
   }
 }
